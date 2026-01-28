@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Overtime Pay Calculator | LumoCalc</title>
+  <meta name="description" content="Calculate weekly gross pay including overtime (time-and-a-half)." />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="Home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span><span class="brand__name">LumoCalc</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="pill" href="overtime-pay.html">Overtime</a>
+        <a class="pill" href="loan-payment.html">Loan</a>
+        <a class="pill" href="tip-split.html">Tip Split</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="h1">Overtime Pay Calculator</h1>
+      <p class="lede">Estimate weekly gross pay with overtime (default: over 40 hours at 1.5×).</p>
+    </section>
+
+    <section class="card">
+      <form class="form" id="form" novalidate>
+        <div class="row">
+          <div class="field">
+            <label for="rate">Hourly rate</label>
+            <input id="rate" inputmode="decimal" placeholder="e.g., 18.50" />
+          </div>
+          <div class="field">
+            <label for="hours">Total hours worked (week)</label>
+            <input id="hours" inputmode="decimal" placeholder="e.g., 46" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="threshold">Overtime starts after</label>
+            <input id="threshold" inputmode="decimal" value="40" />
+          </div>
+          <div class="field">
+            <label for="mult">Overtime multiplier</label>
+            <input id="mult" inputmode="decimal" value="1.5" />
+          </div>
+        </div>
+
+        <div class="row">
+          <button class="btn btn--primary" type="submit">Calculate</button>
+          <button class="btn" type="button" id="reset">Reset</button>
+        </div>
+
+        <div id="err" class="error" role="alert" aria-live="polite"></div>
+
+        <div class="result" id="out" hidden>
+          <strong id="gross">$0.00</strong>
+          <div class="small" id="breakdown"></div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <a class="pill" href="../index.html">← Back to all calculators</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/calc-overtime.js"></script>
+</body>
+</html>
