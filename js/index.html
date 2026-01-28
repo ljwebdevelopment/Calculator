@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LumoCalc — Free Online Calculators</title>
+  <meta name="description" content="Fast, free calculators: overtime pay, loan payment, tip split, and more." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span>
+          <span class="brand__name">LumoCalc</span>
+          <span class="brand__tag">Fast, free calculators</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="pill" href="calculators/overtime-pay.html">Overtime</a>
+        <a class="pill" href="calculators/loan-payment.html">Loan</a>
+        <a class="pill" href="calculators/tip-split.html">Tip Split</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="h1">Simple calculators that work.</h1>
+      <p class="lede">No accounts, no clutter. Pick a calculator and get your answer instantly.</p>
+    </section>
+
+    <section class="grid" aria-label="Calculator list">
+      <article class="card">
+        <h2>Overtime Pay Calculator</h2>
+        <p>Estimate weekly gross pay with overtime rules (time-and-a-half).</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="calculators/overtime-pay.html">Open</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Loan Payment Calculator</h2>
+        <p>Monthly payment from loan amount, APR, and term.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="calculators/loan-payment.html">Open</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Tip Split Calculator</h2>
+        <p>Split a bill and tip between people with optional tax.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="calculators/tip-split.html">Open</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>© <span id="y"></span> LumoCalc • Built on GitHub Pages</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
