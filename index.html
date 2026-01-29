@@ -1,82 +1,99 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="icon" href="/assets/LumoCalc%20Favicon.png" type="image/png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LumoCalc | Free Online Calculators</title>
-  <meta name="description" content="Fast, free calculators: paycheck, rent, debt snowball, DTI, 401k, net worth, overtime, loan payment, credit card payoff, tip split, and more." />
+  <meta name="description" content="Fast, free calculators: paycheck, rent, debt snowball, DTI, 401k, net worth, overtime, loan payment, credit card payoff, and more." />
+
+  <!-- Favicon (NO leading slash for GitHub Pages project repos) -->
+  <link rel="icon" href="assets/LumoCalc%20Favicon.png" type="image/png">
+
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <div id="site-header"></div>
 
   <main class="container">
+    <!-- Hero -->
     <section class="hero hero--home">
-  <div class="hero__bg" aria-hidden="true">
-    <div class="blob blob--a"></div>
-    <div class="blob blob--b"></div>
-    <div class="blob blob--c"></div>
+      <div class="hero__bg" aria-hidden="true">
+        <div class="blob blob--a"></div>
+        <div class="blob blob--b"></div>
+        <div class="blob blob--c"></div>
 
-    <!-- “Splotch bubbles” with images -->
-    <div class="splotch splotch--1">
-      <img src="assets/stock-1.jpg" alt="" loading="lazy">
-    </div>
-    <div class="splotch splotch--2">
-      <img src="assets/stock-2.jpg" alt="" loading="lazy">
-    </div>
-    <div class="splotch splotch--3">
-      <img src="assets/stock-3.jpg" alt="" loading="lazy">
-    </div>
-  </div>
+        <!-- Splotch bubbles -->
+        <div class="splotch splotch--1">
+          <img src="assets/stock-1.jpg" alt="" loading="lazy">
+        </div>
+        <div class="splotch splotch--2">
+          <img src="assets/stock-2.jpg" alt="" loading="lazy">
+        </div>
+        <div class="splotch splotch--3">
+          <img src="assets/stock-3.jpg" alt="" loading="lazy">
+        </div>
+      </div>
 
-  <div class="hero__content">
-    <p class="kicker">Free calculators that feel premium.</p>
-    <h1 class="h1">The fastest way to get answers — <span class="accent">no sign-up</span>, no fluff.</h1>
-    <p class="lede">
-      LumoCalc is a clean, modern calculator hub for real life: money, work, school, and everyday math.
-      <strong>100% free</strong>. <strong>No accounts</strong>. Works instantly on mobile.
-    </p>
+      <div class="hero__content">
+        <p class="kicker">Free calculators that feel premium.</p>
 
-    <div class="hero__cta">
-      <a class="btn btn--primary" href="calculators/loan-payment.html">Try a calculator</a>
-      <a class="btn" href="#all">Browse all</a>
-    </div>
+        <h1 class="h1">
+          The fastest way to get answers — <span class="accent">no sign-up</span>, no fluff.
+        </h1>
 
-    <div class="trust">
-      <div class="trust__item">✅ Free forever</div>
-      <div class="trust__item">✅ No sign-up</div>
-      <div class="trust__item">✅ Mobile-first</div>
-      <div class="trust__item">✅ Clear results</div>
-    </div>
-  </div>
-</section>
+        <p class="lede">
+          LumoCalc is a clean, modern calculator hub for real life: money, work, school, and everyday math.
+          <strong>100% free</strong>. <strong>No accounts</strong>. Works instantly on mobile.
+        </p>
 
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="calculators/loan-payment.html">Try a calculator</a>
+          <a class="btn" href="#all">Browse all</a>
+        </div>
 
+        <div class="trust">
+          <div class="trust__item">✅ Free forever</div>
+          <div class="trust__item">✅ No sign-up</div>
+          <div class="trust__item">✅ Mobile-first</div>
+          <div class="trust__item">✅ Clear results</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Anchor target for Browse All -->
+    <div id="all"></div>
+
+    <!-- Section heading to make it feel "real" -->
+    <section class="home-head">
+      <h2 class="home-head__title">All calculators</h2>
+      <p class="home-head__sub">Pick one and get your answer instantly.</p>
+    </section>
+
+    <!-- Calculator grid -->
     <section class="grid" aria-label="Calculator list">
       <article class="card">
-  <h2>Basic Calculator</h2>
-  <p>Clean keypad for everyday math.</p>
-  <div class="actions">
-    <a class="btn btn--primary" href="calculators/basic-calculator.html">Open</a>
-  </div>
-</article>
+        <h2>Basic Calculator</h2>
+        <p>Clean keypad for everyday math.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="calculators/basic-calculator.html">Open</a>
+        </div>
+      </article>
 
-<article class="card">
-  <h2>Scientific Calculator</h2>
-  <p>Trig, logs, powers, roots, and parentheses.</p>
-  <div class="actions">
-    <a class="btn btn--primary" href="calculators/scientific-calculator.html">Open</a>
-  </div>
-</article>
+      <article class="card">
+        <h2>Scientific Calculator</h2>
+        <p>Trig, logs, powers, roots, and parentheses.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="calculators/scientific-calculator.html">Open</a>
+        </div>
+      </article>
 
-<article class="card">
-  <h2>Algebra Calculator</h2>
-  <p>Solve linear and quadratic equations.</p>
-  <div class="actions">
-    <a class="btn btn--primary" href="calculators/algebra-calculator.html">Open</a>
-  </div>
-</article>
+      <article class="card">
+        <h2>Algebra Calculator</h2>
+        <p>Solve linear and quadratic equations.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="calculators/algebra-calculator.html">Open</a>
+        </div>
+      </article>
 
       <article class="card">
         <h2>Paycheck Calculator</h2>
@@ -149,15 +166,12 @@
           <a class="btn btn--primary" href="calculators/credit-card-payoff.html">Open</a>
         </div>
       </article>
-      
     </section>
   </main>
 
-<div id="site-footer"></div>
+  <div id="site-footer"></div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <!-- Universal header/footer injector -->
   <script src="js/includes.js"></script>
 </body>
 </html>
