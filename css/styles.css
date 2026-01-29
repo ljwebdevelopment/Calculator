@@ -215,3 +215,8 @@ input:focus, select:focus{
   .row{grid-template-columns: 1fr}
   .nav{display:none}
 }
+/* ---------- Theme overrides ---------- */
+.theme-green{
+  --accent:#80bf37;
+  --accent-soft:#f2fae9; /* light green hover */
+}
