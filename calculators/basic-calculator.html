@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Basic Calculator | LumoCalc</title>
+  <meta name="description" content="A fast basic calculator with add, subtract, multiply, divide, percent, and clear." />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="icon" type="image/png" href="/assets/LumoCalc%20Favicon.png">
+</head>
+<body class="theme-green">
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="Home">
+        <img src="../assets/LumoCalc%20logo%20(1).png" alt="LumoCalc logo" class="brand__logo">
+        <span class="brand__name">LumoCalc</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="pill" href="basic-calculator.html">Basic</a>
+        <a class="pill" href="scientific-calculator.html">Scientific</a>
+        <a class="pill" href="algebra-calculator.html">Algebra</a>
+
+        <a class="pill" href="paycheck-calculator.html">Paycheck</a>
+        <a class="pill" href="rent-affordability.html">Rent</a>
+        <a class="pill" href="debt-snowball.html">Debt</a>
+        <a class="pill" href="debt-to-income.html">DTI</a>
+        <a class="pill" href="401k-retirement.html">401k</a>
+        <a class="pill" href="net-worth.html">Net Worth</a>
+        <a class="pill" href="overtime-pay.html">Overtime</a>
+        <a class="pill" href="loan-payment.html">Loan</a>
+        <a class="pill" href="credit-card-payoff.html">Credit Card</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="h1">Basic Calculator</h1>
+      <p class="lede">Quick math with a clean keypad. Works on mobile and desktop.</p>
+    </section>
+
+    <section class="card" style="max-width:520px; margin:0 auto;">
+      <div class="result" style="margin-top:0;">
+        <div class="small" id="expr" aria-live="polite"> </div>
+        <strong id="display">0</strong>
+      </div>
+
+      <div class="grid" style="margin-top:14px;">
+        <!-- row 1 -->
+        <button class="btn" data-act="clear" style="grid-column: span 3;">AC</button>
+        <button class="btn" data-act="back" style="grid-column: span 3;">⌫</button>
+        <button class="btn" data-op="%" style="grid-column: span 3;">%</button>
+        <button class="btn btn--primary" data-op="/" style="grid-column: span 3;">÷</button>
+
+        <!-- row 2 -->
+        <button class="btn" data-num="7" style="grid-column: span 3;">7</button>
+        <button class="btn" data-num="8" style="grid-column: span 3;">8</button>
+        <button class="btn" data-num="9" style="grid-column: span 3;">9</button>
+        <button class="btn btn--primary" data-op="*" style="grid-column: span 3;">×</button>
+
+        <!-- row 3 -->
+        <button class="btn" data-num="4" style="grid-column: span 3;">4</button>
+        <button class="btn" data-num="5" style="grid-column: span 3;">5</button>
+        <button class="btn" data-num="6" style="grid-column: span 3;">6</button>
+        <button class="btn btn--primary" data-op="-" style="grid-column: span 3;">−</button>
+
+        <!-- row 4 -->
+        <button class="btn" data-num="1" style="grid-column: span 3;">1</button>
+        <button class="btn" data-num="2" style="grid-column: span 3;">2</button>
+        <button class="btn" data-num="3" style="grid-column: span 3;">3</button>
+        <button class="btn btn--primary" data-op="+" style="grid-column: span 3;">+</button>
+
+        <!-- row 5 -->
+        <button class="btn" data-act="neg" style="grid-column: span 3;">+/−</button>
+        <button class="btn" data-num="0" style="grid-column: span 6;">0</button>
+        <button class="btn" data-num="." style="grid-column: span 3;">.</button>
+
+        <!-- row 6 -->
+        <button class="btn btn--primary" data-act="equals" style="grid-column: span 12;">=</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>
+        © <span id="y"></span> LumoCalc • Built by
+        <a href="https://ljwebdevelopment.com" target="_blank" rel="noopener">LJ Web Development</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+  <script type="module" src="../js/calc-basic.js"></script>
+</body>
+</html>
