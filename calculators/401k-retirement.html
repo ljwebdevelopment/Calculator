@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>401(k) Retirement Calculator | LumoCalc</title>
+  <meta name="description" content="Estimate your 401(k) balance at retirement based on contributions, employer match, and growth." />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="../index.html">
+      <span class="brand__mark"></span>
+      <span class="brand__name">LumoCalc</span>
+    </a>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h1 class="h1">401(k) / Retirement Calculator</h1>
+    <p class="lede">Estimate your retirement balance using simple assumptions.</p>
+  </section>
+
+  <section class="card">
+    <form class="form" id="form">
+      <div class="row">
+        <div class="field">
+          <label>Current age</label>
+          <input id="age" inputmode="decimal" placeholder="e.g., 35" />
+        </div>
+        <div class="field">
+          <label>Retirement age</label>
+          <input id="retire" inputmode="decimal" value="67" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>Current 401(k) balance</label>
+          <input id="balance" inputmode="decimal" placeholder="e.g., 45000" />
+        </div>
+        <div class="field">
+          <label>Annual salary</label>
+          <input id="salary" inputmode="decimal" placeholder="e.g., 70000" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>Your contribution (%)</label>
+          <input id="contrib" inputmode="decimal" value="6" />
+        </div>
+        <div class="field">
+          <label>Employer match (%)</label>
+          <input id="match" inputmode="decimal" value="3" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>Estimated annual return (%)</label>
+          <input id="return" inputmode="decimal" value="7" />
+        </div>
+      </div>
+
+      <div class="row">
+        <button class="btn btn--primary">Calculate</button>
+        <button class="btn" type="button" id="reset">Reset</button>
+      </div>
+
+      <div id="err" class="error"></div>
+
+      <div class="result" id="out" hidden>
+        <strong id="total">—</strong>
+        <div class="small" id="years"></div>
+        <div class="small" id="notes"></div>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <a class="pill" href="../index.html">← Back to calculators</a>
+  </div>
+</footer>
+
+<script type="module" src="../js/calc-401k.js"></script>
+</body>
+</html>
