@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Algebra Calculator | LumoCalc</title>
+  <meta name="description" content="Solve linear equations and quadratic equations quickly." />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="icon" type="image/png" href="/assets/LumoCalc%20Favicon.png">
+</head>
+<body class="theme-green">
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="Home">
+        <img src="../assets/LumoCalc%20logo%20(1).png" alt="LumoCalc logo" class="brand__logo">
+        <span class="brand__name">LumoCalc</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="pill" href="basic-calculator.html">Basic</a>
+        <a class="pill" href="scientific-calculator.html">Scientific</a>
+        <a class="pill" href="algebra-calculator.html">Algebra</a>
+
+        <a class="pill" href="paycheck-calculator.html">Paycheck</a>
+        <a class="pill" href="rent-affordability.html">Rent</a>
+        <a class="pill" href="debt-snowball.html">Debt</a>
+        <a class="pill" href="debt-to-income.html">DTI</a>
+        <a class="pill" href="401k-retirement.html">401k</a>
+        <a class="pill" href="net-worth.html">Net Worth</a>
+        <a class="pill" href="overtime-pay.html">Overtime</a>
+        <a class="pill" href="loan-payment.html">Loan</a>
+        <a class="pill" href="credit-card-payoff.html">Credit Card</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="h1">Algebra Calculator</h1>
+      <p class="lede">Solve a linear equation (ax + b = c) or a quadratic (ax² + bx + c = 0).</p>
+    </section>
+
+    <section class="grid">
+      <article class="card" style="grid-column: span 12;">
+        <h2>Linear Equation Solver</h2>
+        <p class="small">Solve <strong>ax + b = c</strong></p>
+
+        <div class="row">
+          <div class="field"><label>a</label><input id="la" inputmode="decimal" value="1"></div>
+          <div class="field"><label>b</label><input id="lb" inputmode="decimal" value="0"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>c</label><input id="lc" inputmode="decimal" value="0"></div>
+          <div class="field"><label>&nbsp;</label><button class="btn btn--primary" type="button" id="solveLinear">Solve</button></div>
+        </div>
+
+        <div class="result" id="linearOut" hidden>
+          <strong id="linearAns">—</strong>
+          <div class="small" id="linearNote"></div>
+        </div>
+      </article>
+
+      <article class="card" style="grid-column: span 12;">
+        <h2>Quadratic Equation Solver</h2>
+        <p class="small">Solve <strong>ax² + bx + c = 0</strong></p>
+
+        <div class="row">
+          <div class="field"><label>a</label><input id="qa" inputmode="decimal" value="1"></div>
+          <div class="field"><label>b</label><input id="qb" inputmode="decimal" value="0"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>c</label><input id="qc" inputmode="decimal" value="0"></div>
+          <div class="field"><label>&nbsp;</label><button class="btn btn--primary" type="button" id="solveQuad">Solve</button></div>
+        </div>
+
+        <div class="result" id="quadOut" hidden>
+          <strong id="quadAns">—</strong>
+          <div class="small" id="quadNote"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>
+        © <span id="y"></span> LumoCalc • Built by
+        <a href="https://ljwebdevelopment.com" target="_blank" rel="noopener">LJ Web Development</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script type="module" src="../js/calc-algebra.js"></script>
+</body>
+</html>
