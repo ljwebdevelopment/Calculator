@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Net Worth Calculator | LumoCalc</title>
+  <meta name="description" content="Calculate your net worth by adding assets and liabilities. See totals and your net worth instantly." />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="Home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span><span class="brand__name">LumoCalc</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="pill" href="paycheck-calculator.html">Paycheck</a>
+        <a class="pill" href="rent-affordability.html">Rent</a>
+        <a class="pill" href="debt-snowball.html">Debt</a>
+        <a class="pill" href="debt-to-income.html">DTI</a>
+        <a class="pill" href="401k-retirement.html">401k</a>
+        <a class="pill" href="net-worth.html">Net Worth</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="h1">Net Worth Calculator</h1>
+      <p class="lede">Add your assets and liabilities to see your net worth instantly. Saved in your browser.</p>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <button class="btn btn--primary" type="button" id="addAsset">Add Asset</button>
+        <button class="btn btn--primary" type="button" id="addLiability">Add Liability</button>
+        <button class="btn" type="button" id="reset">Reset</button>
+      </div>
+
+      <div id="err" class="error" role="alert" aria-live="polite"></div>
+
+      <div class="grid" style="margin-top:14px;">
+        <div class="card" style="grid-column: span 6;">
+          <h2>Assets</h2>
+          <p class="small">Cash, checking/savings, home value, cars, investments, retirement, etc.</p>
+          <div id="assets"></div>
+        </div>
+
+        <div class="card" style="grid-column: span 6;">
+          <h2>Liabilities</h2>
+          <p class="small">Mortgage, auto loans, student loans, credit cards, personal loans, etc.</p>
+          <div id="liabilities"></div>
+        </div>
+      </div>
+
+      <div class="result" style="margin-top:14px;">
+        <strong id="net">Net worth: $0.00</strong>
+        <div class="small" id="totals"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <a class="pill" href="../index.html">← Back to all calculators</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/calc-net-worth.js"></script>
+</body>
+</html>
