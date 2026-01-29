@@ -311,3 +311,57 @@ input:focus, select:focus{
   }
 }
 
+/* ===== Slide-in tray animation (right -> left) ===== */
+.cat{
+  position:relative;
+}
+
+/* Start hidden: off to the right */
+.cat__tray{
+  display:grid;                 /* keep grid; we will animate visibility */
+  opacity:0;
+  transform: translateX(24px);
+  pointer-events:none;
+
+  position:absolute;
+  right:0;                      /* anchor to the right side */
+  left:auto;
+  top:calc(100% + 10px);
+
+  min-width:min(76vw, 820px);
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:10px;
+  box-shadow:0 10px 30px rgba(2,6,23,0.12);
+  z-index:9999;
+
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap:8px;
+
+  transition:
+    transform 220ms ease,
+    opacity 220ms ease;
+}
+
+/* When open: slide into place */
+.cat[open] .cat__tray{
+  opacity:1;
+  transform: translateX(0);
+  pointer-events:auto;
+}
+
+/* Mobile: trays become in-flow so they don't get cut off */
+@media (max-width: 760px){
+  .cat{ position:static; }
+  .cat__tray{
+    position:static;
+    min-width:unset;
+    width:100%;
+    margin-top:10px;
+    transform:none;
+    opacity:1;
+    pointer-events:auto;
+    transition:none;
+  }
+}
