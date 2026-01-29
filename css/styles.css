@@ -491,3 +491,15 @@ input:focus, select:focus{
   .splotch{ display:none; } /* keep it clean on small screens */
   .blob{ opacity:0.45; }
 }
+.home-head{
+  margin:18px 0 10px;
+}
+.home-head__title{
+  margin:0 0 4px;
+  font-size:18px;
+}
+.home-head__sub{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
