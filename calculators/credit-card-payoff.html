@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Credit Card Payoff Calculator | LumoCalc</title>
+  <meta name="description" content="Estimate how long it takes to pay off a credit card balance and how much interest you’ll pay." />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="Home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span><span class="brand__name">LumoCalc</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="pill" href="overtime-pay.html">Overtime</a>
+        <a class="pill" href="loan-payment.html">Loan</a>
+        <a class="pill" href="tip-split.html">Tip Split</a>
+        <a class="pill" href="credit-card-payoff.html">Credit Card</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="h1">Credit Card Payoff Calculator</h1>
+      <p class="lede">Estimate payoff time and total interest based on your monthly payment.</p>
+    </section>
+
+    <section class="card">
+      <form class="form" id="form" novalidate>
+        <div class="row">
+          <div class="field">
+            <label for="balance">Current balance</label>
+            <input id="balance" inputmode="decimal" placeholder="e.g., 3200" />
+          </div>
+          <div class="field">
+            <label for="apr">APR (%)</label>
+            <input id="apr" inputmode="decimal" placeholder="e.g., 24.99" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="payment">Monthly payment</label>
+            <input id="payment" inputmode="decimal" placeholder="e.g., 150" />
+          </div>
+          <div class="field">
+            <label for="extra">Extra monthly payment (optional)</label>
+            <input id="extra" inputmode="decimal" value="0" />
+          </div>
+        </div>
+
+        <div class="row">
+          <button class="btn btn--primary" type="submit">Calculate</button>
+          <button class="btn" type="button" id="reset">Reset</button>
+        </div>
+
+        <div id="err" class="error" role="alert" aria-live="polite"></div>
+
+        <div class="result" id="out" hidden>
+          <strong id="time">Payoff time: —</strong>
+          <div class="small" id="line1"></div>
+          <div class="small" id="line2"></div>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Notes</h2>
+      <p class="small">
+        This assumes you stop adding new charges. Credit card interest is typically compounded daily, but most payoff estimators approximate with monthly compounding.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <a class="pill" href="../index.html">← Back to all calculators</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/calc-cc-payoff.js"></script>
+</body>
+</html>
