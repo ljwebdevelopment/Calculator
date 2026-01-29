@@ -44,6 +44,13 @@ a:hover{color:var(--accent)}
   gap:10px;
   align-items:center;
 }
+
+.brand__logo{
+  height:36px;
+  width:auto;
+  display:block;
+}
+
 .brand__mark{
   width:34px;
   height:34px;
