@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paycheck Calculator | LumoCalc</title>
+  <meta name="description" content="Estimate paycheck amounts from hourly or salary, pay frequency, and optional overtime." />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="Home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span><span class="brand__name">LumoCalc</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="pill" href="overtime-pay.html">Overtime</a>
+        <a class="pill" href="loan-payment.html">Loan</a>
+        <a class="pill" href="credit-card-payoff.html">Credit Card</a>
+        <a class="pill" href="paycheck-calculator.html">Paycheck</a>
+        <a class="pill" href="rent-affordability.html">Rent</a>
+        <a class="pill" href="debt-snowball.html">Debt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="h1">Paycheck Calculator</h1>
+      <p class="lede">Estimate gross pay per paycheck from hourly or salary. Optional overtime included.</p>
+    </section>
+
+    <section class="card">
+      <form class="form" id="form" novalidate>
+        <div class="row">
+          <div class="field">
+            <label for="mode">Pay type</label>
+            <select id="mode">
+              <option value="hourly" selected>Hourly</option>
+              <option value="salary">Salary</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="freq">Pay frequency</label>
+            <select id="freq">
+              <option value="weekly">Weekly (52/yr)</option>
+              <option value="biweekly" selected>Biweekly (26/yr)</option>
+              <option value="semimonthly">Semi-monthly (24/yr)</option>
+              <option value="monthly">Monthly (12/yr)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- HOURLY -->
+        <div id="hourlyBox">
+          <div class="row">
+            <div class="field">
+              <label for="rate">Hourly rate</label>
+              <input id="rate" inputmode="decimal" placeholder="e.g., 18.50" />
+            </div>
+            <div class="field">
+              <label for="hours">Hours worked per pay period</label>
+              <input id="hours" inputmode="decimal" placeholder="e.g., 80 (biweekly)" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="otOn">Include overtime?</label>
+              <select id="otOn">
+                <option value="no" selected>No</option>
+                <option value="yes">Yes</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="otThreshold">OT threshold (hours/week)</label>
+              <input id="otThreshold" inputmode="decimal" value="40" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="otMult">OT multiplier</label>
+              <input id="otMult" inputmode="decimal" value="1.5" />
+            </div>
+            <div class="field">
+              <label for="hoursPerWeek">Hours per week (for OT calc)</label>
+              <input id="hoursPerWeek" inputmode="decimal" placeholder="e.g., 46" />
+            </div>
+          </div>
+
+          <p class="small">
+            OT mode uses <strong>hours per week</strong> to compute regular + overtime pay, then multiplies by weeks in the pay period.
+            If you don’t know weekly hours, leave OT off.
+          </p>
+        </div>
+
+        <!-- SALARY -->
+        <div id="salaryBox" hidden>
+          <div class="row">
+            <div class="field">
+              <label for="salary">Annual salary</label>
+              <input id="salary" inputmode="decimal" placeholder="e.g., 52000" />
+            </div>
+            <div class="field">
+              <label for="salaryExtra">Extra per paycheck (optional)</label>
+              <input id="salaryExtra" inputmode="decimal" value="0" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <button class="btn btn--primary" type="submit">Calculate</button>
+          <button class="btn" type="button" id="reset">Reset</button>
+        </div>
+
+        <div id="err" class="error" role="alert" aria-live="polite"></div>
+
+        <div class="result" id="out" hidden>
+          <strong id="paycheck">$0.00</strong>
+          <div class="small" id="detail1"></div>
+          <div class="small" id="detail2"></div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <a class="pill" href="../index.html">← Back to all calculators</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/calc-paycheck.js"></script>
+</body>
+</html>
