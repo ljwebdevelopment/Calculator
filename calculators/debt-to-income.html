@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Debt-to-Income (DTI) Calculator | LumoCalc</title>
+  <meta name="description" content="Calculate your debt-to-income ratio (DTI) and see how lenders may view your finances." />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="../index.html">
+      <span class="brand__mark"></span>
+      <span class="brand__name">LumoCalc</span>
+    </a>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h1 class="h1">Debt-to-Income (DTI) Calculator</h1>
+    <p class="lede">See how much of your income goes toward monthly debt payments.</p>
+  </section>
+
+  <section class="card">
+    <form class="form" id="form">
+      <div class="row">
+        <div class="field">
+          <label for="income">Monthly gross income</label>
+          <input id="income" inputmode="decimal" placeholder="e.g., 5200" />
+        </div>
+        <div class="field">
+          <label for="debt">Total monthly debt payments</label>
+          <input id="debt" inputmode="decimal" placeholder="e.g., 1450" />
+        </div>
+      </div>
+
+      <div class="row">
+        <button class="btn btn--primary">Calculate</button>
+        <button class="btn" type="button" id="reset">Reset</button>
+      </div>
+
+      <div id="err" class="error"></div>
+
+      <div class="result" id="out" hidden>
+        <strong id="dti">—</strong>
+        <div class="small" id="rating"></div>
+        <div class="small" id="details"></div>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <a class="pill" href="../index.html">← Back to calculators</a>
+  </div>
+</footer>
+
+<script type="module" src="../js/calc-dti.js"></script>
+</body>
+</html>
