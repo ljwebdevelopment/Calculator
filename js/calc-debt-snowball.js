@@ -233,11 +233,11 @@ function simulate(debtsIn, budget, strategy){
 function renderPreview(rows){
   tbody.innerHTML = rows.map(r => `
     <tr>
-      <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,.08);">${r.month}</td>
-      <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,.08);">${escapeHtml(r.focus)}</td>
-      <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,.08);">${money(r.paid)}</td>
-      <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,.08);">${money(r.interest)}</td>
-      <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,.08);">${money(r.remaining)}</td>
+      <td style="padding:8px 10px; border-bottom:1px solid var(--line); font-size:14px;">${r.month}</td>
+      <td style="padding:8px 10px; border-bottom:1px solid var(--line); font-size:14px;">${escapeHtml(r.focus)}</td>
+      <td style="padding:8px 10px; border-bottom:1px solid var(--line); font-size:14px;">${money(r.paid)}</td>
+      <td style="padding:8px 10px; border-bottom:1px solid var(--line); font-size:14px;">${money(r.interest)}</td>
+      <td style="padding:8px 10px; border-bottom:1px solid var(--line); font-size:14px;">${money(r.remaining)}</td>
     </tr>
   `).join("");
 }

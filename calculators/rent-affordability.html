@@ -1,11 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="icon" href="/assets/LumoCalc%20Favicon.png" type="image/png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rent Affordability Calculator | LumoCalc</title>
-  <meta name="description" content="Estimate a safe rent range based on income, debt payments, and common affordability rules." />
+  <meta name="description" content="Estimate a safe rent range based on your income, debt payments, and the 30% rule or debt-to-income check. Free, no sign-up." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lumocalc.com/calculators/rent-affordability.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lumocalc.com/calculators/rent-affordability.html" />
+  <meta property="og:site_name" content="LumoCalc" />
+  <meta property="og:title" content="Rent Affordability Calculator | LumoCalc" />
+  <meta property="og:description" content="Estimate a safe rent range from income, debt payments, and common affordability rules." />
+  <meta property="og:image" content="https://lumocalc.com/assets/LumoCalc%20Favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Rent Affordability Calculator | LumoCalc" />
+  <meta name="twitter:description" content="Estimate a safe rent range from income, debt payments, and common affordability rules." />
+
+  <link rel="icon" href="../assets/LumoCalc%20Favicon.png" type="image/png">
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
@@ -45,7 +58,7 @@
 
         <div class="row">
           <div class="field">
-            <label for="rulePct">“Rent %” guideline</label>
+            <label for="rulePct">"Rent %" guideline</label>
             <select id="rulePct">
               <option value="30" selected>30% of gross income (common)</option>
               <option value="25">25% of gross (more conservative)</option>
@@ -90,5 +103,17 @@
 
   <script type="module" src="../js/calc-rent.js"></script>
   <script src="../js/includes.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Rent Affordability Calculator",
+    "applicationCategory": "FinanceApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "operatingSystem": "All",
+    "url": "https://lumocalc.com/calculators/rent-affordability.html"
+  }
+  </script>
 </body>
 </html>

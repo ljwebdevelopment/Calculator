@@ -1,11 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="icon" href="/assets/LumoCalc%20Favicon.png" type="image/png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Debt Snowball Calculator | LumoCalc</title>
-  <meta name="description" content="Plan debt payoff using snowball or avalanche method. Add multiple debts, set monthly budget, and estimate payoff time." />
+  <title>Debt Snowball & Avalanche Calculator | LumoCalc</title>
+  <meta name="description" content="Plan your debt payoff using the snowball or avalanche method. Add multiple debts, set a monthly budget, and estimate your payoff time and total interest." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lumocalc.com/calculators/debt-snowball.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lumocalc.com/calculators/debt-snowball.html" />
+  <meta property="og:site_name" content="LumoCalc" />
+  <meta property="og:title" content="Debt Snowball & Avalanche Calculator | LumoCalc" />
+  <meta property="og:description" content="Plan debt payoff using snowball or avalanche method. Add multiple debts, set budget, estimate payoff time." />
+  <meta property="og:image" content="https://lumocalc.com/assets/LumoCalc%20Favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Debt Snowball & Avalanche Calculator | LumoCalc" />
+  <meta name="twitter:description" content="Plan debt payoff using snowball or avalanche method. Estimate payoff time and total interest." />
+
+  <link rel="icon" href="../assets/LumoCalc%20Favicon.png" type="image/png">
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
@@ -63,7 +76,7 @@
       <h2>Your Debts</h2>
       <div class="small">Enter balance and APR. Minimum payment is required unless you use the % rule.</div>
       <div id="debts"></div>
-      <div class="small">Tip: You can refresh the page—your debts are saved in this browser.</div>
+      <div class="small">Tip: You can refresh the page — your debts are saved in this browser.</div>
     </section>
 
     <section class="card" id="out" hidden>
@@ -74,17 +87,17 @@
         <div class="small" id="summary2"></div>
       </div>
 
-      <h2 style="margin-top:14px;">First 12 Months Preview</h2>
+      <h2 style="margin-top:18px;">First 12 Months Preview</h2>
       <div class="small">This is an estimate with monthly compounding. Real card interest can vary.</div>
-      <div id="tableWrap" class="result" style="overflow:auto; margin-top:10px;">
-        <table id="table" style="width:100%; border-collapse:collapse;">
+      <div id="tableWrap" class="result" style="overflow:auto; margin-top:12px;">
+        <table id="table" style="width:100%; border-collapse:collapse; font-size:14px;">
           <thead>
             <tr>
-              <th style="text-align:left; padding:8px; border-bottom:1px solid rgba(255,255,255,.10);">Month</th>
-              <th style="text-align:left; padding:8px; border-bottom:1px solid rgba(255,255,255,.10);">Focus Debt</th>
-              <th style="text-align:left; padding:8px; border-bottom:1px solid rgba(255,255,255,.10);">Total Paid</th>
-              <th style="text-align:left; padding:8px; border-bottom:1px solid rgba(255,255,255,.10);">Interest</th>
-              <th style="text-align:left; padding:8px; border-bottom:1px solid rgba(255,255,255,.10);">Remaining</th>
+              <th style="text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); font-weight:600; color:var(--muted);">Month</th>
+              <th style="text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); font-weight:600; color:var(--muted);">Focus Debt</th>
+              <th style="text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); font-weight:600; color:var(--muted);">Total Paid</th>
+              <th style="text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); font-weight:600; color:var(--muted);">Interest</th>
+              <th style="text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); font-weight:600; color:var(--muted);">Remaining</th>
             </tr>
           </thead>
           <tbody id="tbody"></tbody>
@@ -97,5 +110,17 @@
 
   <script type="module" src="../js/calc-debt-snowball.js"></script>
   <script src="../js/includes.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Debt Snowball / Avalanche Calculator",
+    "applicationCategory": "FinanceApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "operatingSystem": "All",
+    "url": "https://lumocalc.com/calculators/debt-snowball.html"
+  }
+  </script>
 </body>
 </html>

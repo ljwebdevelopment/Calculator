@@ -1,11 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="icon" href="/assets/LumoCalc%20Favicon.png" type="image/png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Net Worth Calculator | LumoCalc</title>
-  <meta name="description" content="Calculate your net worth by adding assets and liabilities. See totals and your net worth instantly." />
+  <meta name="description" content="Calculate your net worth by adding assets (cash, home, investments) and liabilities (loans, cards). Results are instant and auto-saved in your browser." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lumocalc.com/calculators/net-worth.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lumocalc.com/calculators/net-worth.html" />
+  <meta property="og:site_name" content="LumoCalc" />
+  <meta property="og:title" content="Net Worth Calculator | LumoCalc" />
+  <meta property="og:description" content="Add assets and liabilities to calculate your net worth instantly. Auto-saved in your browser." />
+  <meta property="og:image" content="https://lumocalc.com/assets/LumoCalc%20Favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Net Worth Calculator | LumoCalc" />
+  <meta name="twitter:description" content="Add assets and liabilities to calculate your net worth instantly. Auto-saved in your browser." />
+
+  <link rel="icon" href="../assets/LumoCalc%20Favicon.png" type="image/png">
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
@@ -50,5 +63,17 @@
 
   <script type="module" src="../js/calc-net-worth.js"></script>
   <script src="../js/includes.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Net Worth Calculator",
+    "applicationCategory": "FinanceApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "operatingSystem": "All",
+    "url": "https://lumocalc.com/calculators/net-worth.html"
+  }
+  </script>
 </body>
 </html>

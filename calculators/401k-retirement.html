@@ -1,11 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="icon" href="/assets/LumoCalc%20Favicon.png" type="image/png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>401(k) Retirement Calculator | LumoCalc</title>
-  <meta name="description" content="Estimate your 401(k) balance at retirement based on contributions, employer match, and growth." />
+  <meta name="description" content="Estimate your 401(k) balance at retirement based on current balance, salary, contribution percentage, employer match, and expected annual return." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lumocalc.com/calculators/401k-retirement.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lumocalc.com/calculators/401k-retirement.html" />
+  <meta property="og:site_name" content="LumoCalc" />
+  <meta property="og:title" content="401(k) Retirement Calculator | LumoCalc" />
+  <meta property="og:description" content="Estimate your 401(k) balance at retirement based on contributions, employer match, and growth." />
+  <meta property="og:image" content="https://lumocalc.com/assets/LumoCalc%20Favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="401(k) Retirement Calculator | LumoCalc" />
+  <meta name="twitter:description" content="Estimate your 401(k) balance at retirement based on contributions, employer match, and growth." />
+
+  <link rel="icon" href="../assets/LumoCalc%20Favicon.png" type="image/png">
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
@@ -76,9 +89,19 @@
 
 <div id="site-footer"></div>
 
-
 <script type="module" src="../js/calc-401k.js"></script>
-  <script src="../js/includes.js"></script>
+<script src="../js/includes.js"></script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "401(k) Retirement Calculator",
+  "applicationCategory": "FinanceApplication",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "operatingSystem": "All",
+  "url": "https://lumocalc.com/calculators/401k-retirement.html"
+}
+</script>
 </body>
 </html>

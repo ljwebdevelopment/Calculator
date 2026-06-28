@@ -1,11 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="icon" href="/assets/LumoCalc%20Favicon.png" type="image/png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Overtime Pay Calculator | LumoCalc</title>
-  <meta name="description" content="Calculate weekly gross pay including overtime (time-and-a-half)." />
+  <meta name="description" content="Calculate weekly gross pay including overtime. Set your hourly rate, total hours, overtime threshold, and multiplier (default 1.5×). Free, no sign-up." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lumocalc.com/calculators/overtime-pay.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lumocalc.com/calculators/overtime-pay.html" />
+  <meta property="og:site_name" content="LumoCalc" />
+  <meta property="og:title" content="Overtime Pay Calculator | LumoCalc" />
+  <meta property="og:description" content="Calculate weekly gross pay including overtime (time-and-a-half). Set custom threshold and multiplier." />
+  <meta property="og:image" content="https://lumocalc.com/assets/LumoCalc%20Favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Overtime Pay Calculator | LumoCalc" />
+  <meta name="twitter:description" content="Calculate weekly gross pay including overtime (time-and-a-half)." />
+
+  <link rel="icon" href="../assets/LumoCalc%20Favicon.png" type="image/png">
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
@@ -59,5 +72,17 @@
 
   <script type="module" src="../js/calc-overtime.js"></script>
   <script src="../js/includes.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Overtime Pay Calculator",
+    "applicationCategory": "FinanceApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "operatingSystem": "All",
+    "url": "https://lumocalc.com/calculators/overtime-pay.html"
+  }
+  </script>
 </body>
 </html>

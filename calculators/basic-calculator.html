@@ -4,9 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Basic Calculator | LumoCalc</title>
-  <meta name="description" content="A fast basic calculator with add, subtract, multiply, divide, percent, and clear." />
+  <meta name="description" content="A fast, clean basic calculator for everyday math — add, subtract, multiply, divide, and percent. Works on any device." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lumocalc.com/calculators/basic-calculator.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lumocalc.com/calculators/basic-calculator.html" />
+  <meta property="og:site_name" content="LumoCalc" />
+  <meta property="og:title" content="Basic Calculator | LumoCalc" />
+  <meta property="og:description" content="A fast, clean basic calculator for everyday math — add, subtract, multiply, divide, and percent." />
+  <meta property="og:image" content="https://lumocalc.com/assets/LumoCalc%20Favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Basic Calculator | LumoCalc" />
+  <meta name="twitter:description" content="A fast, clean basic calculator for everyday math — add, subtract, multiply, divide, and percent." />
+
+  <link rel="icon" type="image/png" href="../assets/LumoCalc%20Favicon.png">
   <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="icon" type="image/png" href="/assets/LumoCalc%20Favicon.png">
 </head>
 <body class="theme-green">
   <div id="site-header"></div>
@@ -18,52 +31,61 @@
 
     <section class="card" style="max-width:520px; margin:0 auto;">
       <div class="result" style="margin-top:0;">
-        <div class="small" id="expr" aria-live="polite"> </div>
-        <strong id="display">0</strong>
+        <div class="small" id="expr" aria-live="polite">&nbsp;</div>
+        <div id="display" style="font-size:32px;font-weight:800;letter-spacing:-.02em;min-height:44px;">0</div>
       </div>
 
-      <div class="grid" style="margin-top:14px;">
+      <div class="grid" style="margin-top:14px; gap:8px;">
         <!-- row 1 -->
-        <button class="btn" data-act="clear" style="grid-column: span 3;">AC</button>
-        <button class="btn" data-act="back" style="grid-column: span 3;">⌫</button>
-        <button class="btn" data-op="%" style="grid-column: span 3;">%</button>
-        <button class="btn btn--primary" data-op="/" style="grid-column: span 3;">÷</button>
+        <button class="btn" data-act="clear" style="grid-column:span 3;">AC</button>
+        <button class="btn" data-act="back"  style="grid-column:span 3;">⌫</button>
+        <button class="btn" data-op="%"      style="grid-column:span 3;">%</button>
+        <button class="btn btn--primary" data-op="/" style="grid-column:span 3;">÷</button>
 
         <!-- row 2 -->
-        <button class="btn" data-num="7" style="grid-column: span 3;">7</button>
-        <button class="btn" data-num="8" style="grid-column: span 3;">8</button>
-        <button class="btn" data-num="9" style="grid-column: span 3;">9</button>
-        <button class="btn btn--primary" data-op="*" style="grid-column: span 3;">×</button>
+        <button class="btn" data-num="7" style="grid-column:span 3;">7</button>
+        <button class="btn" data-num="8" style="grid-column:span 3;">8</button>
+        <button class="btn" data-num="9" style="grid-column:span 3;">9</button>
+        <button class="btn btn--primary" data-op="*" style="grid-column:span 3;">×</button>
 
         <!-- row 3 -->
-        <button class="btn" data-num="4" style="grid-column: span 3;">4</button>
-        <button class="btn" data-num="5" style="grid-column: span 3;">5</button>
-        <button class="btn" data-num="6" style="grid-column: span 3;">6</button>
-        <button class="btn btn--primary" data-op="-" style="grid-column: span 3;">−</button>
+        <button class="btn" data-num="4" style="grid-column:span 3;">4</button>
+        <button class="btn" data-num="5" style="grid-column:span 3;">5</button>
+        <button class="btn" data-num="6" style="grid-column:span 3;">6</button>
+        <button class="btn btn--primary" data-op="-" style="grid-column:span 3;">−</button>
 
         <!-- row 4 -->
-        <button class="btn" data-num="1" style="grid-column: span 3;">1</button>
-        <button class="btn" data-num="2" style="grid-column: span 3;">2</button>
-        <button class="btn" data-num="3" style="grid-column: span 3;">3</button>
-        <button class="btn btn--primary" data-op="+" style="grid-column: span 3;">+</button>
+        <button class="btn" data-num="1" style="grid-column:span 3;">1</button>
+        <button class="btn" data-num="2" style="grid-column:span 3;">2</button>
+        <button class="btn" data-num="3" style="grid-column:span 3;">3</button>
+        <button class="btn btn--primary" data-op="+" style="grid-column:span 3;">+</button>
 
         <!-- row 5 -->
-        <button class="btn" data-act="neg" style="grid-column: span 3;">+/−</button>
-        <button class="btn" data-num="0" style="grid-column: span 6;">0</button>
-        <button class="btn" data-num="." style="grid-column: span 3;">.</button>
+        <button class="btn" data-act="neg" style="grid-column:span 3;">+/−</button>
+        <button class="btn" data-num="0"  style="grid-column:span 6;">0</button>
+        <button class="btn" data-num="."  style="grid-column:span 3;">.</button>
 
         <!-- row 6 -->
-        <button class="btn btn--primary" data-act="equals" style="grid-column: span 12;">=</button>
+        <button class="btn btn--primary" data-act="equals" style="grid-column:span 12;">=</button>
       </div>
     </section>
   </main>
 
-  <footer class="footer"> ... </footer>
+  <div id="site-footer"></div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
   <script type="module" src="../js/calc-basic.js"></script>
   <script src="../js/includes.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Basic Calculator",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "operatingSystem": "All",
+    "url": "https://lumocalc.com/calculators/basic-calculator.html"
+  }
+  </script>
 </body>
 </html>
