@@ -1,11 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="icon" href="/assets/LumoCalc%20Favicon.png" type="image/png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Paycheck Calculator | LumoCalc</title>
-  <meta name="description" content="Estimate paycheck amounts from hourly or salary, pay frequency, and optional overtime." />
+  <meta name="description" content="Estimate gross paycheck amounts from hourly rate or annual salary, with optional overtime calculation. Free, no sign-up needed." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lumocalc.com/calculators/paycheck-calculator.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lumocalc.com/calculators/paycheck-calculator.html" />
+  <meta property="og:site_name" content="LumoCalc" />
+  <meta property="og:title" content="Paycheck Calculator | LumoCalc" />
+  <meta property="og:description" content="Estimate gross paycheck from hourly or salary, any pay frequency, with optional overtime." />
+  <meta property="og:image" content="https://lumocalc.com/assets/LumoCalc%20Favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Paycheck Calculator | LumoCalc" />
+  <meta name="twitter:description" content="Estimate gross paycheck from hourly or salary, any pay frequency, with optional overtime." />
+
+  <link rel="icon" href="../assets/LumoCalc%20Favicon.png" type="image/png">
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
@@ -77,7 +90,7 @@
 
           <p class="small">
             OT mode uses <strong>hours per week</strong> to compute regular + overtime pay, then multiplies by weeks in the pay period.
-            If you don’t know weekly hours, leave OT off.
+            If you don't know weekly hours, leave OT off.
           </p>
         </div>
 
@@ -115,5 +128,17 @@
 
   <script type="module" src="../js/calc-paycheck.js"></script>
   <script src="../js/includes.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Paycheck Calculator",
+    "applicationCategory": "FinanceApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "operatingSystem": "All",
+    "url": "https://lumocalc.com/calculators/paycheck-calculator.html"
+  }
+  </script>
 </body>
 </html>

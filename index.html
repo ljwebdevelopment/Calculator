@@ -4,12 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LumoCalc | Free Online Calculators</title>
-  <meta name="description" content="Fast, free calculators: paycheck, rent, debt snowball, DTI, 401k, net worth, overtime, loan payment, credit card payoff, and more." />
+  <meta name="description" content="Fast, free calculators: paycheck, rent, debt snowball, DTI, 401k, net worth, overtime, loan payment, credit card payoff, and more. No sign-up required." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lumocalc.com/" />
 
-  <!-- Favicon (NO leading slash for GitHub Pages project repos) -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lumocalc.com/" />
+  <meta property="og:site_name" content="LumoCalc" />
+  <meta property="og:title" content="LumoCalc | Free Online Calculators" />
+  <meta property="og:description" content="Fast, free calculators for real life — money, work, and everyday math. No sign-up, no fluff." />
+  <meta property="og:image" content="https://lumocalc.com/assets/LumoCalc%20Favicon.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="LumoCalc | Free Online Calculators" />
+  <meta name="twitter:description" content="Fast, free calculators for real life — money, work, and everyday math. No sign-up, no fluff." />
+  <meta name="twitter:image" content="https://lumocalc.com/assets/LumoCalc%20Favicon.png" />
+
   <link rel="icon" href="assets/LumoCalc%20Favicon.png" type="image/png">
-
   <link rel="stylesheet" href="css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "LumoCalc",
+    "url": "https://lumocalc.com/",
+    "description": "Fast, free calculators for real life — money, work, and everyday math.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://lumocalc.com/#all",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 <body>
   <div id="site-header"></div>
@@ -21,8 +50,6 @@
         <div class="blob blob--a"></div>
         <div class="blob blob--b"></div>
         <div class="blob blob--c"></div>
-
-        <!-- Splotch bubbles -->
         <div class="splotch splotch--1">
           <img src="assets/pexels-katerina-holmes-5905923.jpg" alt="" loading="lazy">
         </div>
@@ -43,12 +70,12 @@
 
         <p class="lede">
           LumoCalc is a clean, modern calculator hub for real life: money, work, school, and everyday math.
-          <strong>100% free</strong>. <strong>No accounts</strong>. Works instantly on mobile.
+          <strong style="color:rgba(255,255,255,.9)">100% free</strong>. Works instantly on mobile.
         </p>
 
         <div class="hero__cta">
-          <a class="btn btn--primary" href="calculators/loan-payment.html">Try a calculator</a>
-          <a class="btn" href="#all">Browse all</a>
+          <a class="btn btn--primary" href="calculators/loan-payment.html" aria-label="Open loan payment calculator">Try a calculator</a>
+          <a class="btn" href="#all" aria-label="Browse all calculators">Browse all</a>
         </div>
 
         <div class="trust">
@@ -60,10 +87,8 @@
       </div>
     </section>
 
-    <!-- Anchor target for Browse All -->
     <div id="all"></div>
 
-    <!-- Section heading to make it feel "real" -->
     <section class="home-head">
       <h2 class="home-head__title">All calculators</h2>
       <p class="home-head__sub">Pick one and get your answer instantly.</p>
@@ -71,47 +96,94 @@
 
     <!-- Calculator grid -->
     <section class="grid" aria-label="Calculator list">
-      <article class="card">
+
+      <!-- Basic -->
+      <article class="card calc-card calc-card--green">
+        <span class="calc-card__icon">🔢</span>
+        <span class="calc-card__tag tag--basic">Basic</span>
         <h2>Basic Calculator</h2>
-        <p>Clean keypad for everyday math.</p>
+        <p>Clean keypad for everyday add, subtract, multiply, divide, and percent.</p>
         <div class="actions">
           <a class="btn btn--primary" href="calculators/basic-calculator.html">Open</a>
         </div>
       </article>
 
-      <article class="card">
+      <article class="card calc-card calc-card--green">
+        <span class="calc-card__icon">🧮</span>
+        <span class="calc-card__tag tag--basic">Basic</span>
         <h2>Scientific Calculator</h2>
-        <p>Trig, logs, powers, roots, and parentheses.</p>
+        <p>Trig, logs, powers, roots, and parentheses. Safe expression parser.</p>
         <div class="actions">
           <a class="btn btn--primary" href="calculators/scientific-calculator.html">Open</a>
         </div>
       </article>
 
-      <article class="card">
+      <article class="card calc-card calc-card--green">
+        <span class="calc-card__icon">📐</span>
+        <span class="calc-card__tag tag--basic">Basic</span>
         <h2>Algebra Calculator</h2>
-        <p>Solve linear and quadratic equations.</p>
+        <p>Solve linear and quadratic equations instantly with step-by-step answers.</p>
         <div class="actions">
           <a class="btn btn--primary" href="calculators/algebra-calculator.html">Open</a>
         </div>
       </article>
 
-      <article class="card">
+      <!-- Financial -->
+      <article class="card calc-card calc-card--blue">
+        <span class="calc-card__icon">💰</span>
+        <span class="calc-card__tag tag--fin">Financial</span>
         <h2>Paycheck Calculator</h2>
-        <p>Estimate gross pay per paycheck from hourly or salary (optional overtime).</p>
+        <p>Estimate gross pay per paycheck from hourly or salary with optional overtime.</p>
         <div class="actions">
           <a class="btn btn--primary" href="calculators/paycheck-calculator.html">Open</a>
         </div>
       </article>
 
-      <article class="card">
-        <h2>Rent Affordability Calculator</h2>
-        <p>Estimate a safe rent range from income, debt payments, and common rules.</p>
+      <article class="card calc-card calc-card--blue">
+        <span class="calc-card__icon">⏱️</span>
+        <span class="calc-card__tag tag--fin">Financial</span>
+        <h2>Overtime Pay Calculator</h2>
+        <p>Estimate weekly gross pay with overtime rules (time-and-a-half or custom).</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="calculators/overtime-pay.html">Open</a>
+        </div>
+      </article>
+
+      <article class="card calc-card calc-card--blue">
+        <span class="calc-card__icon">🏦</span>
+        <span class="calc-card__tag tag--fin">Financial</span>
+        <h2>Loan Payment Calculator</h2>
+        <p>Monthly payment from loan amount, APR, and term. See total interest paid.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="calculators/loan-payment.html">Open</a>
+        </div>
+      </article>
+
+      <article class="card calc-card calc-card--blue">
+        <span class="calc-card__icon">💳</span>
+        <span class="calc-card__tag tag--fin">Financial</span>
+        <h2>Credit Card Payoff</h2>
+        <p>Estimate payoff time and total interest based on your monthly payment.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="calculators/credit-card-payoff.html">Open</a>
+        </div>
+      </article>
+
+      <!-- Housing -->
+      <article class="card calc-card calc-card--purple">
+        <span class="calc-card__icon">🏠</span>
+        <span class="calc-card__tag tag--housing">Housing</span>
+        <h2>Rent Affordability</h2>
+        <p>Estimate a safe rent range from income, debt payments, and common affordability rules.</p>
         <div class="actions">
           <a class="btn btn--primary" href="calculators/rent-affordability.html">Open</a>
         </div>
       </article>
 
-      <article class="card">
+      <!-- Debt -->
+      <article class="card calc-card calc-card--orange">
+        <span class="calc-card__icon">❄️</span>
+        <span class="calc-card__tag tag--debt">Debt</span>
         <h2>Debt Snowball / Avalanche</h2>
         <p>Plan payoff time and interest across multiple debts with a monthly budget.</p>
         <div class="actions">
@@ -119,59 +191,42 @@
         </div>
       </article>
 
-      <article class="card">
-        <h2>Debt-to-Income (DTI) Calculator</h2>
-        <p>See how lenders may view your debt compared to your income.</p>
+      <article class="card calc-card calc-card--orange">
+        <span class="calc-card__icon">📊</span>
+        <span class="calc-card__tag tag--debt">Debt</span>
+        <h2>Debt-to-Income (DTI)</h2>
+        <p>See how lenders may view your debt compared to your monthly income.</p>
         <div class="actions">
           <a class="btn btn--primary" href="calculators/debt-to-income.html">Open</a>
         </div>
       </article>
 
-      <article class="card">
-        <h2>401(k) / Retirement Calculator</h2>
-        <p>Estimate retirement balance based on contributions, match, and growth.</p>
+      <!-- Retirement -->
+      <article class="card calc-card calc-card--teal">
+        <span class="calc-card__icon">📈</span>
+        <span class="calc-card__tag tag--retire">Retirement</span>
+        <h2>401(k) / Retirement</h2>
+        <p>Estimate retirement balance based on contributions, employer match, and growth.</p>
         <div class="actions">
           <a class="btn btn--primary" href="calculators/401k-retirement.html">Open</a>
         </div>
       </article>
 
-      <article class="card">
+      <article class="card calc-card calc-card--teal">
+        <span class="calc-card__icon">💎</span>
+        <span class="calc-card__tag tag--retire">Retirement</span>
         <h2>Net Worth Calculator</h2>
-        <p>Add assets and liabilities to calculate your net worth instantly.</p>
+        <p>Add assets and liabilities to calculate your net worth instantly. Auto-saved.</p>
         <div class="actions">
           <a class="btn btn--primary" href="calculators/net-worth.html">Open</a>
         </div>
       </article>
 
-      <article class="card">
-        <h2>Overtime Pay Calculator</h2>
-        <p>Estimate weekly gross pay with overtime rules (time-and-a-half).</p>
-        <div class="actions">
-          <a class="btn btn--primary" href="calculators/overtime-pay.html">Open</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>Loan Payment Calculator</h2>
-        <p>Monthly payment from loan amount, APR, and term.</p>
-        <div class="actions">
-          <a class="btn btn--primary" href="calculators/loan-payment.html">Open</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>Credit Card Payoff Calculator</h2>
-        <p>Estimate payoff time and total interest based on your monthly payment.</p>
-        <div class="actions">
-          <a class="btn btn--primary" href="calculators/credit-card-payoff.html">Open</a>
-        </div>
-      </article>
     </section>
   </main>
 
   <div id="site-footer"></div>
 
-  <!-- Universal header/footer injector -->
   <script src="js/includes.js"></script>
 </body>
 </html>

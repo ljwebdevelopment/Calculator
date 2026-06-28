@@ -1,11 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="icon" href="/assets/LumoCalc%20Favicon.png" type="image/png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Loan Payment Calculator | LumoCalc</title>
-  <meta name="description" content="Calculate monthly loan payment from amount, APR, and term." />
+  <meta name="description" content="Calculate your monthly loan payment from amount, APR, and term. See total interest paid and payoff impact of extra payments." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lumocalc.com/calculators/loan-payment.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lumocalc.com/calculators/loan-payment.html" />
+  <meta property="og:site_name" content="LumoCalc" />
+  <meta property="og:title" content="Loan Payment Calculator | LumoCalc" />
+  <meta property="og:description" content="Calculate monthly loan payments from amount, APR, and term. See total interest and savings from extra payments." />
+  <meta property="og:image" content="https://lumocalc.com/assets/LumoCalc%20Favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Loan Payment Calculator | LumoCalc" />
+  <meta name="twitter:description" content="Calculate monthly loan payments from amount, APR, and term." />
+
+  <link rel="icon" href="../assets/LumoCalc%20Favicon.png" type="image/png">
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
@@ -67,5 +80,17 @@
 
   <script type="module" src="../js/calc-loan.js"></script>
   <script src="../js/includes.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Loan Payment Calculator",
+    "applicationCategory": "FinanceApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "operatingSystem": "All",
+    "url": "https://lumocalc.com/calculators/loan-payment.html"
+  }
+  </script>
 </body>
 </html>

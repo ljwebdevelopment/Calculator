@@ -4,9 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Algebra Calculator | LumoCalc</title>
-  <meta name="description" content="Solve linear equations and quadratic equations quickly." />
+  <meta name="description" content="Free algebra calculator — solve linear equations (ax + b = c) and quadratic equations (ax² + bx + c = 0) instantly." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lumocalc.com/calculators/algebra-calculator.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lumocalc.com/calculators/algebra-calculator.html" />
+  <meta property="og:site_name" content="LumoCalc" />
+  <meta property="og:title" content="Algebra Calculator | LumoCalc" />
+  <meta property="og:description" content="Solve linear and quadratic equations quickly. Free, no sign-up required." />
+  <meta property="og:image" content="https://lumocalc.com/assets/LumoCalc%20Favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Algebra Calculator | LumoCalc" />
+  <meta name="twitter:description" content="Solve linear and quadratic equations quickly. Free, no sign-up required." />
+
+  <link rel="icon" type="image/png" href="../assets/LumoCalc%20Favicon.png">
   <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="icon" type="image/png" href="/assets/LumoCalc%20Favicon.png">
 </head>
 <body class="theme-green">
   <div id="site-header"></div>
@@ -59,8 +72,19 @@
 
   <div id="site-footer"></div>
 
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
   <script type="module" src="../js/calc-algebra.js"></script>
   <script src="../js/includes.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Algebra Calculator",
+    "applicationCategory": "EducationApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "operatingSystem": "All",
+    "url": "https://lumocalc.com/calculators/algebra-calculator.html"
+  }
+  </script>
 </body>
 </html>
